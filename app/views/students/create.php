@@ -23,17 +23,23 @@
                 <h1 class="text-xl font-bold">Tambah Siswa</h1>
                 <p>Menampilkan daftar Siswa yang terdaftar</p>
             </div>
-            <div class="bg-white shadow rounded-lg p-4">
-<form action="">
-        <div>
-            <label class="block font-bold" for="">Nama</label>
-            <input class="border rounded-lg py-2 px-4" type="text" name="name" id="name" placeholder="Masukkan nama">
-            <label class="block font-bold" for="">NIS</label>
-            <input class="border rounded-lg py-2 px-4" type="text" name="name" id="name" placeholder="Masukkan nama">
-            <label class="block font-bold" for="">Kelas</label>
-            <input class="border rounded-lg py-2 px-4" type="text" name="name" id="name" placeholder="Masukkan nama">
-            <label class="block font-bold" for="">No telpon</label>
-            <input class="border rounded-lg py-2 px-4" type="text" name="name" id="name" placeholder="Masukkan nama">
+        <div class="bg-white shadow rounded-lg p-4">
+    <form action="" class="p-4 grid grid-cols-2 gap-4">
+        <div class="space-y-2">
+            <label class="block font-bold" for="name">Nama</label>
+            <input class="w-full border rounded-lg py-2 px-4" type="text" name="name" id="name" placeholder="Masukkan nama">
+        </div>
+        <div class="space-y-2">
+            <label class="block font-bold" for="nis">NIS</label>
+            <input class="w-full border rounded-lg py-2 px-4" type="text" name="nis" id="nis" placeholder="Masukkan nis">
+        </div>
+        <div class="space-y-2">
+            <label class="block font-bold" for="kelas">Kelas</label>
+            <input class="w-full border rounded-lg py-2 px-4" type="text" name="kelas" id="kelas" placeholder="Masukkan kelas">
+        </div>
+        <div class="space-y-2">
+            <label class="block font-bold" for="phone_number">No Telepon</label>
+            <input class="w-full border rounded-lg py-2 px-4" type="text" name="phone_number" id=phone_number" placeholder="Masukkan no telepon">
         </div>
     </form>
             </div>
