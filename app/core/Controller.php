@@ -6,7 +6,7 @@ class Controller
     public function view(string $view, array $data = [])
     {
         $viewPath = str_replace('.', '/', $view);
-        $content = '../' . $viewPath . '.php';
+        $content = '../app/views/' . $viewPath . '.php';
 
         if (!empty($data)) {
             extract($data);
