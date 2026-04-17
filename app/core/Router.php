@@ -13,7 +13,7 @@ class Router
             'method' => $method,
             'uri' => $uri,
             'controller' => $controller,
-            'function' => $function
+            'function' => $function,
         ];
     }
 
@@ -36,18 +36,20 @@ class Router
 
                 require_once '../app/controllers/' . $route['controller'] . '.php';
 
-                $controllerClass = 'App\Controllers\\' . $route['controller'];
+                $controllerClass = 'App\\Controllers\\' . $route['controller'];
                 $controller = new $controllerClass();
                 $function = $route['function'];
+
                 call_user_func_array([$controller, $function], $matches);
                 return;
             }
 
-
         }
+
         http_response_code(404);
         echo '<h1>404 - Page Not Found</h1>';
-
     }
+
 }
+
 ?>

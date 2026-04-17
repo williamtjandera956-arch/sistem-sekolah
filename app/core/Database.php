@@ -7,9 +7,9 @@ class Database
 
     protected $connection;
 
-    public function _construct()
+    public function __construct()
     {
-        $this ->connection = mysqli_connect(
+        $this->connection = mysqli_connect(
             DB_HOST,
             DB_USER,
             DB_PASSWORD,
@@ -20,8 +20,8 @@ class Database
             die('Error to connect Database');
         }
     }
-}
 
+}
 
 
 ?>

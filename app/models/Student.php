@@ -1,31 +1,31 @@
 <?php
 namespace App\Models;
 require_once '../app/core/Database.php';
-require_once '../aoo/models/Student.php';
+
 use App\Core\Database;
 
-class Students extends Database
+class Student extends Database
 {
     protected $table = 'students';
 
-    //menampilkan daftar siswa
+    // Menampilkan Daftar Siswa
     public function getStudents()
     {
         $students = [];
 
         $query = "SELECT * FROM {$this->table}";
         $stmt = $this->connection->prepare($query);
-        $stmt->execute()
+        $stmt->execute();
 
-        $result = $stmt->get_resullt();
+        $result = $stmt->get_result();
 
-        while($student = $result->fetch_assoc()){
+        while ($student = $result->fetch_assoc()) {
             $students[] = $student;
         }
 
-
+        return $students;
     }
-     return $students
+
 }
 
 ?>

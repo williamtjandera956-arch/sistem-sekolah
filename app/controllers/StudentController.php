@@ -4,27 +4,27 @@ require_once '../app/core/Controller.php';
 require_once '../app/models/Student.php';
 
 use App\Core\Controller;
-use App\models\Student;
+use App\Models\Student;
 
 class StudentController extends Controller
 {
 
-
     public function index()
     {
-       $studentModel = new Student();
-       $students = $studentModel->getStudents();
+        $studentModel = new Student();
+        $students = $studentModel->getStudents();
 
-        print_r($students);
 
-       $this->view('students.index');
+        $this->view('students.index',[
+            'students' => $students
+        ]);
     }
- 
+
     public function create()
     {
         $this->view('students.create');
     }
- 
+
     public function show(string $id)
     {
         $this->view('students.show');
@@ -34,5 +34,5 @@ class StudentController extends Controller
     {
         $this->view('students.edit');
     }
+
 }
- 
